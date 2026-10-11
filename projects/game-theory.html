@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Theory: Strategic Interaction in Economic Systems | Siwat Teimtad</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- Header Navigation -->
+  <header class="article-nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="../index.html" class="back-link">
+        <span>←</span> Back to Portfolio
+      </a>
+      <div style="font-size: 0.8rem; color: var(--text-muted);">
+        Siwat Teimtad // Economic Analysis
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Article Header -->
+    <header class="article-hero">
+      <div class="project-badges">
+        <span class="badge badge-cyan">Microeconomic Theory</span>
+        <span class="badge badge-emerald">Mechanism Design</span>
+        <span class="badge badge-gold">1,500+ Words</span>
+      </div>
+      <h1 style="font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800; line-height: 1.25; margin: 1rem 0;">
+        Game Theory: <span style="color: var(--accent-emerald);">Foundations of Strategic Interaction</span>
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 820px; line-height: 1.8;">
+        A rigorous analytical treatise on non-cooperative game theory, equilibrium concepts, dynamic credibility, and information economics within modern market architectures.
+      </p>
+
+      <div class="article-meta">
+        <span><strong>Author:</strong> Siwat Teimtad</span>
+        <span><strong>Discipline:</strong> Microeconomics & Mathematical Strategy</span>
+        <span><strong>Core Concepts:</strong> Nash Equilibrium, SPNE, Bayesian Games</span>
+        <span><strong>Reading Time:</strong> ~9 min</span>
+      </div>
+    </header>
+
+    <!-- Article Layout -->
+    <div class="article-layout">
+      <!-- Sticky Table of Contents -->
+      <aside class="toc-wrapper">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li><a href="#foundations">1. The Nature of Strategic Interaction</a></li>
+          <li><a href="#taxonomy">2. Formal Taxonomy of Games</a></li>
+          <li><a href="#nash-equilibrium">3. Dominance & Nash Equilibrium</a></li>
+          <li><a href="#classic-dilemmas">4. Classic Dilemmas & Payoff Structures</a></li>
+          <li><a href="#dynamic-games">5. Dynamic Games & Backward Induction</a></li>
+          <li><a href="#asymmetric-information">6. Incomplete Information & Signaling</a></li>
+          <li><a href="#repeated-games">7. Repeated Interactions & The Folk Theorem</a></li>
+          <li><a href="#policy-applications">8. Mechanism Design & Macroeconomic Policy</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <article class="article-content">
+        <section id="foundations">
+          <h2>1. The Nature of Strategic Interaction</h2>
+          <p>
+            Classical economics under pure perfect competition posits that individual economic actors are "price takers"—agents whose discrete choices exert negligible influence over broader market equilibria. A wheat farmer in Kansas decides how much grain to plant solely by observing prevailing world prices, indifferent to whether a single farmer in Nebraska plants twenty acres or thirty.
+          </p>
+          <p>
+            However, outside idealized frictionless markets, real economic environments are characterized by <strong>strategic interdependence</strong>: situations where the payoff accrued by an economic actor depends not merely upon their own actions, but fundamentally upon the discrete decisions made by other identifiable actors.
+          </p>
+          <p>
+            Game theory, pioneered by John von Neumann and Oskar Morgenstern in their landmark 1944 work <em>Theory of Games and Economic Behavior</em>, provides the mathematical framework for formalizing and solving these interactive optimization problems. It abstracts real-world competitive friction—such as duopolies setting output quantities, sovereign states deploying trade barriers, and workers signaling latent productivity—into rigorous mathematical structures.
+          </p>
+        </section>
+
+        <section id="taxonomy">
+          <h2>2. Formal Taxonomy of Games</h2>
+          <p>
+            A game is mathematically defined as a tuple \(G = (N, (S_i)_{i \in N}, (u_i)_{i \in N})\), where:
+          </p>
+          <ul>
+            <li>\(N = \{1, 2, \dots, n\}\) represents the finite set of participating players.</li>
+            <li>\(S_i\) denotes the strategy space available to player \(i\), with \(s \in S = S_1 \times \dots \times S_n\) representing a joint strategy profile.</li>
+            <li>\(u_i: S \to \mathbb{R}\) represents the Von Neumann-Morgenstern utility (payoff) function mapping outcomes to real numbers for player \(i\).</li>
+          </ul>
+          <p>
+            Economic games are categorized along two critical structural dimensions:
+          </p>
+          <ol>
+            <li><strong>Static vs. Dynamic:</strong> In static (simultaneous-move) games, players select strategies without knowledge of the other players' concurrent choices. In dynamic (sequential-move) games, players move in chronological order, observing prior decisions before executing their own.</li>
+            <li><strong>Complete vs. Incomplete Information:</strong> In games of complete information, the strategy spaces and payoff functions of all players are common knowledge. In Bayesian games of incomplete information, players possess private types or private cost parameters unknown to their rivals.</li>
+          </ol>
+        </section>
+
+        <section id="nash-equilibrium">
+          <h2>3. Dominance and the Nash Equilibrium Concept</h2>
+          <p>
+            The simplest solution concept in strategic analysis is <em>strict dominance</em>. A strategy \(s_i^*\) strictly dominates strategy \(s_i'\) if it yields a strictly higher payoff for player \(i\) regardless of the strategies executed by all other players:
+          </p>
+          <blockquote>
+            \(u_i(s_i^*, s_{-i}) > u_i(s_i', s_{-i}) \quad \forall s_{-i} \in S_{-i}\)
+          </blockquote>
+          <p>
+            Rational players will never select strictly dominated strategies. Through Iterated Elimination of Strictly Dominated Strategies (IESDS), complex payoff tables can frequently be collapsed into predictable outcomes.
+          </p>
+          <p>
+            Yet in many games, no single strategy dominates all others. In 1950, John Forbes Nash Jr. formulated the universal solution concept that transformed social science: the <strong>Nash Equilibrium</strong>.
+          </p>
+          <div class="callout callout-emerald">
+            <div class="callout-title">Nash Equilibrium Condition</div>
+            <p>
+              A strategy profile \(s^* = (s_1^*, s_2^*, \dots, s_n^*)\) constitutes a Nash Equilibrium if no player has an incentive to unilaterally deviate from their chosen strategy given the strategies chosen by everyone else:
+              <br><br>
+              \(u_i(s_i^*, s_{-i}^*) \ge u_i(s_i, s_{-i}^*) \quad \forall s_i \in S_i, \forall i \in N\)
+            </p>
+          </div>
+          <p>
+            Nash proved via Kakutani's Fixed Point Theorem that every finite game with a finite number of players and pure strategies possesses at least one equilibrium in either pure or mixed strategies (where players randomize over pure actions with probability distributions).
+          </p>
+        </section>
+
+        <section id="classic-dilemmas">
+          <h2>4. Classic Dilemmas & Payoff Structures</h2>
+          <p>
+            The profound power of game theory lies in illuminating how individually rational choices can culminate in collectively suboptimal outcomes. The archetypal manifestation is the <strong>Prisoner's Dilemma</strong>.
+          </p>
+
+          <div class="table-wrapper">
+            <table class="econ-table">
+              <thead>
+                <tr>
+                  <th>Player 1 \ Player 2</th>
+                  <th>Cooperate (Remain Silent)</th>
+                  <th>Defect (Confess)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cooperate (Silent)</strong></td>
+                  <td>(-1, -1) &nbsp; <span style="color: var(--accent-emerald);">[Pareto Optimal]</span></td>
+                  <td>(-10, 0)</td>
+                </tr>
+                <tr>
+                  <td><strong>Defect (Confess)</strong></td>
+                  <td>(0, -10)</td>
+                  <td><strong>(-8, -8) &nbsp; <span style="color: var(--accent-cyan);">[Nash Equilibrium]</span></strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Notice that for both players, "Defect" strictly dominates "Cooperate." If Player 2 is silent, Player 1 gains a payoff of 0 by defecting instead of -1. If Player 2 confesses, Player 1 gains -8 by defecting instead of -10. Consequently, both players confess, landing at the unique Nash Equilibrium of (-8, -8).
+          </p>
+          <p>
+            This outcome is strictly Pareto dominated by (-1, -1), the outcome where both remain silent. This tragic tension explains real-world economic failures, including:
+          </p>
+          <ul>
+            <li><strong>OPEC Cartel Instability:</strong> Every petroleum-exporting country benefits when aggregate production is restricted, yet individual members face massive incentives to cheat on quotas and overproduce.</li>
+            <li><strong>Price Wars in Duopoly:</strong> Competing airlines slash fares below marginal cost to capture market share, erasing industry profitability.</li>
+            <li><strong>Tragedy of the Commons:</strong> Fishermen overharvest ocean fisheries because conservation by one party yields zero benefits if rivals deplete the stock.</li>
+          </ul>
+        </section>
+
+        <section id="dynamic-games">
+          <h2>5. Dynamic Games and Credible Commitments</h2>
+          <p>
+            When decisions are executed sequentially over time, the static Nash Equilibrium concept permits "non-credible threats"—commitments that a rational agent would have no incentive to execute if their node were actually reached in the game tree.
+          </p>
+          <p>
+            To resolve this deficiency, Nobel laureate Reinhard Selten introduced the concept of <strong>Subgame Perfect Nash Equilibrium (SPNE)</strong>, solved systematically through <em>backward induction</em>:
+          </p>
+          <div class="callout callout-cyan">
+            <div class="callout-title">The Principle of Backward Induction</div>
+            <p>
+              An analyst begins at the terminal nodes of the game tree, identifying the optimal action of the final decision-maker. One then rolls back to the penultimate nodes, replacing previous branches with the anticipated equilibrium payoffs, continuing backward until the root is reached.
+            </p>
+          </div>
+          <p>
+            Consider entry deterrence. An incumbent firm threatens that if an entrant penetrates the market, the incumbent will trigger a destructive price war that bankrupts both. Backward induction demonstrates that once the entrant actually commits sunk capital and enters, initiating the price war is unprofitable for the incumbent; accommodating entry yields higher immediate returns. The entrant anticipates this, ignores the threat, and enters.
+          </p>
+          <p>
+            To deter entry, the incumbent must make a <em>credible commitment</em>: for instance, building excess production capacity in advance (sunk cost investments) that lowers its marginal cost curve, making aggressive pricing the incumbent's dominant response.
+          </p>
+        </section>
+
+        <section id="asymmetric-information">
+          <h2>6. Incomplete Information, Signaling, and Screening</h2>
+          <p>
+            When participants possess private information, standard game models transition into Bayesian games. Information asymmetry generates severe market failures:
+          </p>
+          <ul>
+            <li><strong>Adverse Selection (George Akerlof, 1970):</strong> In the "Market for Lemons," buyers cannot verify vehicle quality prior to purchase. Because buyers only offer average market value, owners of high-quality vehicles exit the market, leaving only substandard cars ("lemons"), causing entire markets to unravel.</li>
+            <li><strong>Job Market Signaling (Michael Spence, 1973):</strong> High-productivity job seekers overcome adverse selection by obtaining costly educational credentials. Crucially, the credential is not required to teach specific vocational skills; it functions as a separating equilibrium signal because the marginal cost of acquiring the credential is systematically lower for high-ability individuals than for low-ability individuals.</li>
+            <li><strong>Screening in Insurance (Rothschild & Stiglitz, 1976):</strong> Insurance providers design menus of contracts pairing deductibles with premiums, compelling policyholders to self-select according to their true risk tolerance.</li>
+          </ul>
+        </section>
+
+        <section id="repeated-games">
+          <h2>7. Repeated Interactions and The Folk Theorem</h2>
+          <p>
+            While single-shot prisoner's dilemmas result in defection, modern commerce thrives because economic relationships are rarely isolated. They are repeatedly played over long time horizons.
+          </p>
+          <p>
+            In infinitely repeated games with discount factor \(\delta \in (0, 1)\), players evaluate the present discounted value of future payoffs:
+          </p>
+          <blockquote>
+            \(PV = \sum_{t=0}^{\infty} \delta^t u_t\)
+          </blockquote>
+          <p>
+            Under the famous <strong>Folk Theorem</strong>, if players are sufficiently patient (i.e., \(\delta\) is sufficiently close to 1), any feasible payoff profile that yields more than the minmax payoff can be sustained as a Subgame Perfect Equilibrium.
+          </p>
+          <p>
+            Strategies such as the <em>Grim Trigger</em> (cooperate until the rival defects once, then defect forever) or <em>Tit-for-Tat</em> (cooperate initially, then mimic the opponent's previous move) harness the "shadow of the future" to enforce sustained cooperation without state intervention.
+          </p>
+        </section>
+
+        <section id="policy-applications">
+          <h2>8. Mechanism Design & Macroeconomic Policy</h2>
+          <p>
+            In contemporary economic science, game theory has progressed from positive analysis (describing how agents behave) to normative <strong>Mechanism Design</strong> ("reverse game theory"): engineering rule structures, incentive schemes, and auction protocols such that self-interested participants organically reveal truthful preferences and produce optimal social equilibria.
+          </p>
+          <p>
+            Key breakthroughs include:
+          </p>
+          <ol>
+            <li><strong>Spectrum Auctions:</strong> Pioneered by Paul Milgrom and Robert Wilson, multi-unit simultaneous ascending auctions generated hundreds of billions in public revenue while efficiently allocating telecommunications bandwidth.</li>
+            <li><strong>Central Bank Credibility:</strong> Applying Kydland and Prescott's time-inconsistency game, macroeconomic institutions recognized that discretionary monetary policy produces inflationary bias. Granting statutory independence to central banks acts as a credible commitment device that anchors inflation expectations.</li>
+          </ol>
+          <p>
+            Ultimately, Game Theory reveals that economic outcomes are not dictated by mechanistic physical laws, but emerge from the subtle, strategic alignment of human incentives. Understanding this strategic calculus is what separates naive speculation from profound economic insight.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <p><strong>Siwat Teimtad</strong> — Economist & Policy Researcher</p>
+        <p style="font-size: 0.75rem; margin-top: 0.3rem;">Contact: <a href="mailto:dx@outlook.com">dx@outlook.com</a></p>
+      </div>
+      <div>
+        <a href="../index.html" style="font-size: 0.8rem;">← Return to Main Page</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
